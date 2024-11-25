@@ -1,0 +1,34 @@
+server:
+  port: 8082
+  host: http://localhost
+
+spring:
+  application:
+    name: rag4j
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/rag4j
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+## JWT
+jwt:
+  issuer: "rag4j"
+  secret-key: "vphCLJGXSToCwwUnhATo8i8TDObsODt+tEYCfMCiFsI="
+  access-token:
+    expiration: 99999999999999999
+  refresh-token:
+    expiration: 99999999999999999

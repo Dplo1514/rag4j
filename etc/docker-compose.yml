@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: rag4j
+      MYSQL_ROOT_PASSWORD: root
+      TZ: Asia/Seoul
+    command: >
+      bash -c "
+      docker-entrypoint.sh mysqld &
+      sleep 30 &&
+      mysql -u root -proot -e 'CREATE DATABASE IF NOT EXISTS rag4j;' &&
+      mysql -u root -proot -e 'CREATE DATABASE IF NOT EXISTS rag4j_test;' &&
+      mysql -u root -proot -e 'CREATE USER IF NOT EXISTS \"root\"@\"%\" IDENTIFIED BY \"root\";' &&
+      mysql -u root -proot -e 'GRANT ALL PRIVILEGES ON rag4j.* TO \"root\"@\"%\";' &&
+      mysql -u root -proot -e 'GRANT ALL PRIVILEGES ON rag4j_test.* TO \"root\"@\"%\";' &&
+      mysql -u root -proot -e 'FLUSH PRIVILEGES;' &&
+      wait
+      "
+    volumes:
+      - ./mysql:/var/lib/mysql
