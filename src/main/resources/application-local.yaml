@@ -37,3 +37,8 @@ chroma:
   host: http://localhost:8000
   username: root
   password: root
+
+openai:
+  api:
+    url: https://api.openai.com/v1/embeddings
+    key: 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

@@ -17,7 +17,7 @@ import java.util.*;
 public class ChromaClient implements ChromaPort {
 
     private final ChromaConfig chromaConfig;
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate; // RestTemplate을 주입받음
     private HttpHeaders headers;
 
     @PostConstruct
@@ -76,9 +76,10 @@ public class ChromaClient implements ChromaPort {
 
     @Override
     public void saveEmbedding(String collectionName, List<double[]> embeddings, List<String> ids,
-                              List<String> documents, List<Map<String, Object>> metadatas, List<String> uris) {
+                              List<String> documents, List<Map<String, Object>> metadatas) {
         String url = chromaConfig.getHost() + "/api/v1/collections/" + collectionName + "/add";
 
+        // double[]를 List<Float>로 변환
         List<List<Float>> floatEmbeddings = new ArrayList<>();
         for (double[] embedding : embeddings) {
             List<Float> floatEmbedding = new ArrayList<>();
@@ -88,14 +89,15 @@ public class ChromaClient implements ChromaPort {
             floatEmbeddings.add(floatEmbedding);
         }
 
+        // 요청 바디 생성
         Map<String, Object> requestBody = Map.of(
                 "embeddings", floatEmbeddings,
                 "ids", ids,
                 "documents", documents,
-                "metadatas", metadatas != null ? metadatas : new ArrayList<>(),
-                "uris", uris != null ? uris : new ArrayList<>()
+                "metadatas", metadatas != null ? metadatas : new ArrayList<>()
         );
 
+        // HTTP 요청 전송
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(requestBody, headers);
         ResponseEntity<String> response = restTemplate.postForEntity(url, entity, String.class);
 
@@ -103,6 +105,7 @@ public class ChromaClient implements ChromaPort {
             throw new RuntimeException("Failed to save embeddings: " + response.getStatusCode());
         }
     }
+
 
     @Override
     public Map<String, Object> retrieveNearestNeighbors(String collectionId, double[] queryEmbedding, int topK) {
@@ -123,6 +126,10 @@ public class ChromaClient implements ChromaPort {
 
         if (!response.getStatusCode().is2xxSuccessful()) {
             throw new RuntimeException("Failed to retrieve nearest neighbors: " + response.getStatusCode());
+        }
+
+        if (response.getBody() == null) {
+            throw new RuntimeException("Response body is null while retrieving nearest neighbors.");
         }
 
         return response.getBody();

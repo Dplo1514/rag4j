@@ -9,11 +9,22 @@ public interface ChromaPort {
 
     void createDatabase(String tenantName, String databaseName);
 
-    String createCollection(String tenantName, String databaseName, String collectionName,
-                            Map<String, Object> configuration, Map<String, Object> metadata, boolean getOrCreate);
+    String createCollection(String tenantName,
+                            String databaseName,
+                            String collectionName,
+                            Map<String, Object> configuration,
+                            Map<String, Object> metadata,
+                            boolean getOrCreate);
 
-    void saveEmbedding(String collectionName, List<double[]> embeddings, List<String> ids,
-                       List<String> documents, List<Map<String, Object>> metadatas, List<String> uris);
+    void saveEmbedding(
+            String collectionName,
+            List<double[]> embeddings,
+            List<String> ids,
+            List<String> documents,
+            List<Map<String, Object>> metadatas
+    );
 
-    Map<String, Object> retrieveNearestNeighbors(String collectionId, double[] queryEmbedding, int topK);
+    Map<String, Object> retrieveNearestNeighbors (String collectionId,
+                                                 double[] queryEmbedding,
+                                                 int topK);
 }
