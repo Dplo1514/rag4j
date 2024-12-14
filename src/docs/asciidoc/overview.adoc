@@ -1,0 +1,49 @@
+[[overview]]
+== Overview
+
+[[overview-http-verbs]]
+=== HTTP Methods
+
+|===
+| Method | Description
+
+| `GET`
+| 리소스를 조회합니다
+
+| `POST`
+| 새로운 리소스를 생성합니다
+
+| `PUT`
+| 기존 리소스를 수정합니다
+
+| `DELETE`
+| 기존 리소스를 삭제합니다
+|===
+
+[[overview-http-status-codes]]
+=== HTTP Status Codes
+
+|===
+| Status code | Usage
+
+| `200 OK`
+| 요청이 성공적으로 처리되었습니다
+
+| `201 Created`
+| 새로운 리소스가 성공적으로 생성되었습니다
+
+| `400 Bad Request`
+| 잘못된 요청입니다
+
+| `401 Unauthorized`
+| 인증이 필요합니다
+
+| `403 Forbidden`
+| 권한이 없습니다
+
+| `404 Not Found`
+| 요청한 리소스가 존재하지 않습니다
+
+| `500 Internal Server Error`
+| 서버 에러가 발생했습니다
+|===

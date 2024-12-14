@@ -1,0 +1,7 @@
+[[test]]
+== Test API
+
+[[test-get]]
+=== 테스트 조회
+
+operation::test[snippets='http-request,http-response,response-fields']

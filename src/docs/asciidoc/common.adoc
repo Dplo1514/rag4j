@@ -1,0 +1,25 @@
+[[common]]
+== Common
+
+[[common-fields]]
+=== Common Response Fields
+
+|===
+| Field | Type | Description
+
+| `status`
+| String
+| 응답 상태 (`success` or `error`)
+
+| `data`
+| Object
+| 응답 데이터
+
+| `error`
+| Object
+| 에러 정보 (에러 발생 시에만 포함)
+
+| `timestamp`
+| String
+| 응답 시간
+|===
