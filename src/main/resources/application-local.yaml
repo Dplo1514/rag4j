@@ -32,3 +32,11 @@ jwt:
     expiration: 99999999999999999
   refresh-token:
     expiration: 99999999999999999
+
+## S3
+cloud:
+  drive:
+    credentials:
+      file-path: src/main/resources/static/google_cloud_credentials.json
+    application:
+      name: raf4jProject

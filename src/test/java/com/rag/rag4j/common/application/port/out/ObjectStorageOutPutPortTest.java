@@ -3,7 +3,7 @@ package com.rag.rag4j.common.application.port.out;
 import static org.mockito.BDDMockito.given;
 
 import com.rag.rag4j.UnitTestSupport;
-import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectDto;
+import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectUrlDto;
 import com.rag.rag4j.common.application.dto.ObjectStorageUploadDto;
 import com.rag.rag4j.common.application.dto.command.ObjectStorageDeleteCommand;
 import com.rag.rag4j.common.application.dto.command.ObjectStorageUploadCommand;
@@ -58,16 +58,16 @@ class ObjectStorageOutPutPortTest extends UnitTestSupport {
             signature
         );
 
-        ObjectStorageGetObjectDto dto = ObjectStorageGetObjectDto.of(
+        ObjectStorageGetObjectUrlDto dto = ObjectStorageGetObjectUrlDto.of(
             url,
             signature
         );
 
         // given
-        given(sut.getObject(query)).willReturn(dto);
+        given(sut.getObjectUrl(query)).willReturn(dto);
 
         // when
-        ObjectStorageGetObjectDto result = sut.getObject(query);
+        ObjectStorageGetObjectUrlDto result = sut.getObjectUrl(query);
 
         // then
         Assertions.assertThat(result.getSignature()).isEqualTo(signature);

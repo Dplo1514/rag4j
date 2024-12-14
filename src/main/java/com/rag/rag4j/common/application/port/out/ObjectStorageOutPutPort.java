@@ -1,6 +1,7 @@
 package com.rag.rag4j.common.application.port.out;
 
-import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectDto;
+import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectStreamDto;
+import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectUrlDto;
 import com.rag.rag4j.common.application.dto.ObjectStorageUploadDto;
 import com.rag.rag4j.common.application.dto.command.ObjectStorageDeleteCommand;
 import com.rag.rag4j.common.application.dto.command.ObjectStorageUploadCommand;
@@ -12,7 +13,9 @@ public interface ObjectStorageOutPutPort {
 
     ObjectStorageUploadDto uploadObject(ObjectStorageUploadCommand command);
 
-    ObjectStorageGetObjectDto getObject(ObjectStorageGetQuery query);
+    ObjectStorageGetObjectUrlDto getObjectUrl(ObjectStorageGetQuery query);
+
+    ObjectStorageGetObjectStreamDto getObjectStream(ObjectStorageGetQuery query);
 
     void deleteObject(ObjectStorageDeleteCommand command);
 

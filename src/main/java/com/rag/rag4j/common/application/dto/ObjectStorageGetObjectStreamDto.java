@@ -1,5 +1,6 @@
 package com.rag.rag4j.common.application.dto;
 
+import java.io.InputStream;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,16 +13,16 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class ObjectStorageGetObjectDto {
-
-    private String url;
+public class ObjectStorageGetObjectStreamDto {
 
     private String signature;
 
-    public static ObjectStorageGetObjectDto of(String url, String signature){
-        return ObjectStorageGetObjectDto.builder()
-            .url(url)
+    private InputStream stream;
+
+    public static ObjectStorageGetObjectStreamDto of(String signature,InputStream stream){
+        return ObjectStorageGetObjectStreamDto.builder()
             .signature(signature)
+            .stream(stream)
             .build();
     }
 
