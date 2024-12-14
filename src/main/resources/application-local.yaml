@@ -32,3 +32,8 @@ jwt:
     expiration: 99999999999999999
   refresh-token:
     expiration: 99999999999999999
+
+chroma:
+  host: http://localhost:8000
+  username: root
+  password: root

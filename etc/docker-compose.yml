@@ -25,3 +25,17 @@ services:
       "
     volumes:
       - ./mysql:/var/lib/mysql
+
+
+  chroma-db:
+    image: ghcr.io/chroma-core/chroma:latest
+    container_name: chroma-db
+    ports:
+      - "8000:8000"
+    environment:
+      - CHROMA_API_AUTH=root:root
+    volumes:
+      - chroma-data:/data
+
+volumes:
+  chroma-data:
