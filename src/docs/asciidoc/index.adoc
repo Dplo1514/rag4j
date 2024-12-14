@@ -1,0 +1,15 @@
+= StockScope REST API 문서
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+:operation-curl-request-title: Example request
+:operation-http-response-title: Example response
+
+include::overview.adoc[]
+
+include::common.adoc[]
+
+include::test.adoc[]

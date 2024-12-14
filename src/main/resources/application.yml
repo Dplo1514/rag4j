@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: rag4j
+
+  profiles:
+    active: local
