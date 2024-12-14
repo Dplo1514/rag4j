@@ -35,3 +35,13 @@ services:
     environment:
       - CHROMADB_SERVER_HOST=0.0.0.0  # 모든 IP에서 접근 가능하게 설정
       - CHROMADB_SERVER_PORT=5000  # 사용할 포트 설정
+
+  spring-app:
+    build:
+      context: C:/Dev/rag4j  # Windows 경로 표기법으로 부모 디렉토리 지정
+    container_name: spring_app_container
+    ports:
+      - "8080:8080"  # Spring Boot 애플리케이션의 포트
+    depends_on:
+      - mysql  # MySQL 서비스가 먼저 시작되도록 설정
+      - chromadb  # ChromaDB 서비스가 먼저 시작되도록 설정

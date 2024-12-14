@@ -20,6 +20,7 @@ public class InputController {
 
     @PostMapping("")
     public ResponseEntity<CommonBody<String>> processInput(@RequestBody InputRequest request) {
+        System.out.println("Access Checked");
         // 입력으로부터 텍스트 확인
         String result = UseCase.process(request.getInputText());
         return ResponseEntity.ok(CommonBody.of(200, "Success", result));

@@ -3,9 +3,11 @@ package com.rag.rag4j.prompt.application.domain.service;
 import com.rag.rag4j.common.documents.port.PersistenceOutputPort;
 import com.rag.rag4j.prompt.application.port.out.ChromaDbPort;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 
+@Service
 @PersistenceOutputPort
 @RequiredArgsConstructor
 public class ChromaDbAdapter implements ChromaDbPort {
