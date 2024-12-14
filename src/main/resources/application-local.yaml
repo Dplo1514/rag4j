@@ -24,21 +24,3 @@ spring:
     open-in-view: false
     database-platform: org.hibernate.dialect.MySQL8Dialect
 
-## JWT
-jwt:
-  issuer: "rag4j"
-  secret-key: "vphCLJGXSToCwwUnhATo8i8TDObsODt+tEYCfMCiFsI="
-  access-token:
-    expiration: 99999999999999999
-  refresh-token:
-    expiration: 99999999999999999
-
-chroma:
-  host: http://localhost:8000
-  username: root
-  password: root
-
-openai:
-  api:
-    url: https://api.openai.com/v1/embeddings
-    key: ??
