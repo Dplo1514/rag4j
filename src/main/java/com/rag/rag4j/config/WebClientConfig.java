@@ -11,7 +11,7 @@ public class WebClientConfig {
     @Bean
     public WebClient webClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:8000")  // TODO : Chroma DB 서버 주소
+                .baseUrl("http://localhost:5000")  // TODO : Chroma DB 서버 주소
                 .build();
     }
 }

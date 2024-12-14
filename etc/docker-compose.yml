@@ -25,3 +25,19 @@ services:
       "
     volumes:
       - ./mysql:/var/lib/mysql
+
+  chromadb:
+    image: python:3.11-slim
+    container_name: chromadb_container
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - CHROMA_HOST=0.0.0.0
+    volumes:
+      - ./chromadb:/app/data
+    command: >
+      bash -c "
+      pip install chromadb && 
+      python -m chromadb.server
+      "
