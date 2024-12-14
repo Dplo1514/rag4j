@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="코드 접근 확인">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/OpenAiClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/OpenAiProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/model/IndexEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/etc/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/app/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/app/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/OpenAIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/OpenAIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/port/in/UseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/port/in/UseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +62,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -83,12 +91,12 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/seunghyeonlee9661/rag4j.git",
-    "accountId": "6e576898-0661-40bd-8b54-99bc7d3fe0d6"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/seunghyeonlee9661/rag4j.git&quot;,
+    &quot;accountId&quot;: &quot;6e576898-0661-40bd-8b54-99bc7d3fe0d6&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -121,6 +129,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "build/settings",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Dev/mome_growth_RAG",
     "node.js.detected.package.eslint": "true",
@@ -128,7 +137,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -141,6 +150,9 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\rag4j\src\main\java\com\rag\rag4j\prompt\application\domain\model" />
+      <recent name="C:\Dev\rag4j\src\main\java\com\rag\rag4j\prompt\application\domain\service" />
+      <recent name="C:\Dev\rag4j\src\main\java\com\rag\rag4j\config" />
       <recent name="$PROJECT_DIR$/doc" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -356,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734205297151</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="코드 접근 확인">
+      <option name="closed" value="true" />
+      <created>1734208379590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734208379590</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

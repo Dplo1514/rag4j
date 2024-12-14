@@ -19,9 +19,12 @@ public class UseCaseImpl implements UseCase {
     @Override
     public String process(String inputText) {
         // Chroma DB에 텍스트 전달하고 유사도 높은 청크 받아오기
-        String keyWord = openAIService.getIndex(inputText);
+        String keyWord = String.valueOf(openAIService.getIndex(inputText));
+        System.out.println("keyWord : " + keyWord);
         String similarChunks = ChromaDbAdapter.getSimilarChunks(inputText,keyWord);
+        System.out.println("similarChunks : " + similarChunks);
         String prompt  = promptGenerateService.generate();
+        System.out.println("prompt : " + prompt);
         return OpenAIService.getAnswer(inputText,similarChunks,prompt);
     }
 }

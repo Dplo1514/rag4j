@@ -4,3 +4,10 @@ spring:
 
   profiles:
     active: local
+
+
+openai:
+  api-key: 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  # OpenAI API 키
+  base-url: https://api.openai.com/v1/  # OpenAI API 기본 URL
+  model: gpt-4-turbo  # 사용할 모델 이름 (GPT-4 Turbo)
+  timeout: 30
