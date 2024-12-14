@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="Chore(chunk, embedding): 디렉토리 설정&#10;&#10;- chunk, embedding 도메인 디렉토리 구조 정의">
+    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발">
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/common.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/index.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/overview.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/test.adoc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/template/adapter/in/app/TempController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/template/adapter/in/app/TempController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,11 +92,15 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/HyunJaae/rag4j&quot;,
-    &quot;accountId&quot;: &quot;d2b8499f-4535-4bff-8f82-6d5d69744a22&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Dplo1514/rag4j.git",
+    "accountId": "d2b8499f-4535-4bff-8f82-6d5d69744a22"
   }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -104,6 +114,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.etc.chroma-db: Compose Deployment.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build rag4j.executor": "Run",
     "Gradle.Rag4jApplicationTests.executor": "Run",
@@ -124,7 +135,7 @@
     "Spring Boot.Rag4jApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "build/settings",
+    "git-widget-placeholder": "embadding",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/devlee/dev/study/rag/rag4j/src/main/java/com/rag/rag4j/embedding",
     "node.js.detected.package.eslint": "true",
@@ -138,6 +149,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\RAG4j\rag4j\src\main\resources\static" />
       <recent name="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embedding" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
@@ -276,9 +288,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="etc.chroma-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="chroma-db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="etc/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.etc.chroma-db: Compose Deployment" />
       <item itemvalue="Gradle.rag4j [classes]" />
       <item itemvalue="Gradle.Rag4jApplicationTests" />
+      <item itemvalue="Gradle.TempControllerTest.test" />
       <item itemvalue="Gradle.rag4j [build]" />
       <item itemvalue="Gradle.rag4j [clean]" />
       <item itemvalue="Gradle.rag4j [dependencies]" />
@@ -286,11 +319,12 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.rag4j [dependencies]" />
+        <item itemvalue="Gradle.Rag4jApplicationTests" />
         <item itemvalue="Gradle.rag4j [build]" />
         <item itemvalue="Gradle.rag4j [clean]" />
-        <item itemvalue="Gradle.rag4j [classes]" />
+        <item itemvalue="Docker.etc.chroma-db: Compose Deployment" />
         <item itemvalue="Gradle.Rag4jApplicationTests" />
-        <item itemvalue="Gradle.rag4j [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -327,15 +361,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732523557381</updated>
     </task>
-    <task id="LOCAL-00002" summary="Chore(test): 테스트 환경 설정&#10;&#10;- Jacoco 설정&#10;- SpringRestDocs 설정">
+    <task id="LOCAL-00002" summary="open AI 이용한 백터 임배딩">
       <option name="closed" value="true" />
-      <created>1734168645289</created>
+      <created>1734210162313</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1734168645289</updated>
+      <updated>1734210162313</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="main merge">
+      <option name="closed" value="true" />
+      <created>1734211170558</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734211170558</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +397,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
+    <MESSAGE value="chroma DB 도입" />
+    <MESSAGE value="open AI 이용한 백터 임배딩" />
+    <MESSAGE value="main merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="main merge" />
     <MESSAGE value="Chore(test): 테스트 환경 설정&#10;&#10;- Jacoco 설정&#10;- SpringRestDocs 설정" />
     <option name="LAST_COMMIT_MESSAGE" value="Chore(test): 테스트 환경 설정&#10;&#10;- Jacoco 설정&#10;- SpringRestDocs 설정" />
   </component>

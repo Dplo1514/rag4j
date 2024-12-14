@@ -26,6 +26,16 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
 
+  chroma-db:
+    image: ghcr.io/chroma-core/chroma:latest
+    container_name: chroma-db
+    ports:
+      - "8000:8000"
+    environment:
+      - CHROMA_API_AUTH=root:root
+    volumes:
+      - chroma-data:/data
+
 
   mongodb:
     image: mongo:latest
@@ -63,3 +73,5 @@ volumes:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
+volumes:
+  chroma-data:
