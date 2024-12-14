@@ -13,5 +13,4 @@ public class OpenAIService implements TempUseCase {
         return null;
     }
 
-
 }

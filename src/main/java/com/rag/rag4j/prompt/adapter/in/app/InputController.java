@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class InputController {
 
-    private final UseCaseImpl inputUseCase;
+    private final UseCaseImpl UseCase;
 
     @PostMapping("")
     public ResponseEntity<CommonBody<String>> processInput(@RequestBody InputRequest request) {
         // 입력으로부터 텍스트 확인
-        String result = inputUseCase.process(request.getInputText());
+        String result = UseCase.process(request.getInputText());
         return ResponseEntity.ok(CommonBody.of(200, "Success", result));
     }
 }

@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="기본 코드">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/ChromaDbAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/app/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/app/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/dto/factory/PromptDtoFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/dto/response/OpenAIResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/dto/response/OpenAIResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/model/Template.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/OpenAIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/OpenAIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/TemplateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/port/in/UseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/port/in/UseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/port/out/ChromaDbPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/port/out/ChromaDbPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +102,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2pCLEXQhtAm7kW5d8ZqMM2EhiWC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -143,6 +157,9 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.rag.rag4j.template.adapter.in.app" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rag.rag4j.prompt.application.domain.service" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.rag4j [dependencies]">
@@ -308,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732523557381</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="기본 코드">
+      <option name="closed" value="true" />
+      <created>1734196233608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734196233608</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +353,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
-    <option name="LAST_COMMIT_MESSAGE" value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
+    <MESSAGE value="기본 코드" />
+    <option name="LAST_COMMIT_MESSAGE" value="기본 코드" />
   </component>
 </project>
