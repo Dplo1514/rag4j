@@ -31,8 +31,7 @@ public class GlobalExceptionHandler {
         HttpStatus httpStatus = responseCode.getHttpStatus();
         String message = responseCode.getMessage();
 
-        ICommonCustomCode customCode = responseCode.getCustomCode();
-        long code = customCode.getCode();
+        long code = responseCode.getCustomCode();
 
         ICommonBody<Void> body = CommonBody.of(code, message, null);
         this.writeLog(e, message);

@@ -10,12 +10,12 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 public enum TempSuccessCode implements ICommonResponseCode {
 
-    DEFAULT(HttpStatus.OK, TempCustomSuccessCode.DEFAULT, "temp api call success"),
+    DEFAULT(HttpStatus.OK, TempCustomSuccessCode.DEFAULT.getCode(), TempCustomSuccessCode.DEFAULT.getMessage()),
     ;
 
     private final HttpStatus httpStatus;
 
-    private final ICommonCustomCode customCode;
+    private final long customCode;
 
     private final String message;
 

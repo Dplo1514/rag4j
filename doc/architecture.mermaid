@@ -1,0 +1,33 @@
+sequenceDiagram
+
+    participant WRIP as WebRestInputPort
+    participant UC as UseCase
+    participant DO as Domain
+    participant PP as PersistencePort
+    participant IP as InfraPort
+    participant DB as Database
+    participant OS as ObjectStorage
+
+    WRIP ->>+ UC : call use case
+    UC ->>+ DO : use domain
+    DO ->>  DO : operate domain logic
+    DO ->>- UC : return result
+    alt [ PERSISTENCE OPERATE ]
+        UC ->>+ PP : call Persistence Port
+        PP ->>+ DB : operate db output transaction
+        DB ->>- PP : return result
+        PP ->>- UC : return result
+        UC ->>+ DO : use domain
+        DO ->>  DO : operation domain logic
+        DO ->>- UC : return result
+    else [ INFRA OPERATE ]
+        UC ->>+ IP : call Infra Port
+        IP ->>+ OS : operate infra output traffic
+        OS ->>- IP : return result
+        IP ->>- UC : return result
+        UC ->>+ DO : use domain
+        DO ->>  DO : operation domain logic
+        DO ->>- UC : return result
+    end
+    UC ->>- WRIP : return result
+

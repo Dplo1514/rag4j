@@ -1,23 +1,20 @@
-package com.rag.rag4j.common.documents.adaptor;
+package com.rag.rag4j.common.documents.port;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;
 
 import java.lang.annotation.*;
 
-@Component
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface InAppAdapter {
+public @interface InfraOutputPort {
 
   /**
-   In App Adaptor Class를 명시하기 위한 Annotation
-   기존 @Component Annotation 대신 해당 Annotation을 사용하도록 한다.
+   Infra Layer의 Port Class를 명시하기 위한 Annotation
    @author : PLO
    @return : String
    */
-  @AliasFor(annotation = Component.class)
   String value() default "";
 
 }

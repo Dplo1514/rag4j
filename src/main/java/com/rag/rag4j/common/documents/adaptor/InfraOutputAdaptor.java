@@ -6,21 +6,21 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import org.springframework.core.annotation.AliasFor;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
-@Repository
+@Component
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface PersistenceAdapter {
+public @interface InfraOutputAdaptor {
 
   /**
-   Persistence Adaptor Class를 명시하기 위한 Annotation
-   기존 @Repositroy Annotation 대신 해당 Annotation을 사용하도록 한다.
+   Infra Layer의 Port Class를 명시하기 위한 Annotation
+   Infra Layer의 호출 Component에 해당 Annotation을 사용하도록 한다.
    @author : PLO
    @return : String
    */
-  @AliasFor(annotation = Repository.class)
+  @AliasFor(annotation = Component.class)
   String value() default "";
 
 }

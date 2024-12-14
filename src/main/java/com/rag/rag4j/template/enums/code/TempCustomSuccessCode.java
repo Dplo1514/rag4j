@@ -12,9 +12,11 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum TempCustomSuccessCode implements ICommonCustomCode {
-    DEFAULT(500)
+    DEFAULT(1, "operation success"),
     ;
 
     private final long code;
+
+    private final String message;
 
 }

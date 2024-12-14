@@ -1,20 +1,22 @@
 package com.rag.rag4j.template.enums.code;
 
 import com.rag.rag4j.common.enums.code.ICommonCustomCode;
+import com.rag.rag4j.common.exception.response.ICommonResponseCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.springframework.http.HttpStatus;
 
-/**
- * Template API 관련 Error Code
- * 단위 : 0 ~ 500
- * @author : Plo
- */
 @Getter
 @AllArgsConstructor
-public enum TempErrorCode implements ICommonCustomCode {
-    DEFAULT(0)
+public enum TempErrorCode implements ICommonResponseCode {
+
+    DEFAULT(HttpStatus.INTERNAL_SERVER_ERROR, TempCustomErrorCode.DEFAULT.getCode(), TempCustomErrorCode.DEFAULT.getMessage())
     ;
 
-    private final long code;
+    private final HttpStatus httpStatus;
+
+    private final long customCode;
+
+    private final String message;
 
 }

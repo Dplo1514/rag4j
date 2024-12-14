@@ -9,6 +9,6 @@ public interface ICommonResponseCode {
 
     String getMessage();
 
-    ICommonCustomCode getCustomCode();
+    long getCustomCode();
 
 }

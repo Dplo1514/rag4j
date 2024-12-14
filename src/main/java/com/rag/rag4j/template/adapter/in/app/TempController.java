@@ -1,10 +1,10 @@
 package com.rag.rag4j.template.adapter.in.app;
 
-import com.rag.rag4j.common.documents.adaptor.WebRestAdapter;
+import com.rag.rag4j.common.documents.port.WebRestInputPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@WebRestAdapter
+@WebRestInputPort
 @RequestMapping("/temp")
 @RequiredArgsConstructor
 public class TempController {
