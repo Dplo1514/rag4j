@@ -23,6 +23,16 @@ spring:
         format_sql: true
     open-in-view: false
     database-platform: org.hibernate.dialect.MySQL8Dialect
+
+  data:
+    mongodb:
+      host: 546.465.445
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: root
+      database: rag4j
+
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
@@ -31,6 +41,7 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
 
 ## JWT
 jwt:

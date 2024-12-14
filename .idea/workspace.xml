@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="main merge">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/adapter/out/LegalSourceDataAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/application/domain/service/ReindexingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/application/port/in/ReindexingUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/application/port/out/SourceDataPort.java" afterDir="false" />
+    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발">
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/common.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/index.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/overview.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/asciidoc/test.adoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/template/adapter/in/app/TempController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/template/adapter/in/app/TempController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +58,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="package.json" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="embadding" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -96,10 +92,10 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Dplo1514/rag4j.git&quot;,
-    &quot;accountId&quot;: &quot;d2b8499f-4535-4bff-8f82-6d5d69744a22&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Dplo1514/rag4j.git",
+    "accountId": "d2b8499f-4535-4bff-8f82-6d5d69744a22"
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -111,7 +107,7 @@
 }</component>
   <component name="ProjectId" id="2pCLEXQhtAm7kW5d8ZqMM2EhiWC" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -124,6 +120,7 @@
     "Gradle.Rag4jApplicationTests.executor": "Run",
     "Gradle.TempControllerTest.test.executor": "Run",
     "Gradle.rag4j [build].executor": "Run",
+    "Gradle.rag4j [classes].executor": "Run",
     "Gradle.rag4j [clean].executor": "Run",
     "Gradle.rag4j [dependencies].executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -140,7 +137,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "embadding",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Desktop/RAG4j/rag4j/src/main/resources/static",
+    "last_opened_file_path": "/Users/devlee/dev/study/rag/rag4j/src/main/java/com/rag/rag4j/embedding",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -153,6 +150,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\RAG4j\rag4j\src\main\resources\static" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embedding" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/java/com/rag/rag4j" />
@@ -165,6 +163,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.rag.rag4j.chunk.application.domain.model" />
       <recent name="com.rag.rag4j.template.adapter.in.app" />
     </key>
   </component>
@@ -198,13 +197,35 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="rag4j [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="classes" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -288,7 +309,9 @@
     </configuration>
     <list>
       <item itemvalue="Docker.etc.chroma-db: Compose Deployment" />
+      <item itemvalue="Gradle.rag4j [classes]" />
       <item itemvalue="Gradle.Rag4jApplicationTests" />
+      <item itemvalue="Gradle.TempControllerTest.test" />
       <item itemvalue="Gradle.rag4j [build]" />
       <item itemvalue="Gradle.rag4j [clean]" />
       <item itemvalue="Gradle.rag4j [dependencies]" />
@@ -297,6 +320,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.rag4j [dependencies]" />
+        <item itemvalue="Gradle.Rag4jApplicationTests" />
         <item itemvalue="Gradle.rag4j [build]" />
         <item itemvalue="Gradle.rag4j [clean]" />
         <item itemvalue="Docker.etc.chroma-db: Compose Deployment" />
@@ -307,8 +331,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -326,7 +350,8 @@
       <workItem from="1732523508437" duration="741000" />
       <workItem from="1732524256214" duration="1163000" />
       <workItem from="1734158188011" duration="5331000" />
-      <workItem from="1734210036869" duration="2554000" />
+      <workItem from="1734165952186" duration="5230000" />
+      <workItem from="1734180205107" duration="5437000" />
     </task>
     <task id="LOCAL-00001" summary="1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발">
       <option name="closed" value="true" />
@@ -376,5 +401,7 @@
     <MESSAGE value="open AI 이용한 백터 임배딩" />
     <MESSAGE value="main merge" />
     <option name="LAST_COMMIT_MESSAGE" value="main merge" />
+    <MESSAGE value="Chore(test): 테스트 환경 설정&#10;&#10;- Jacoco 설정&#10;- SpringRestDocs 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore(test): 테스트 환경 설정&#10;&#10;- Jacoco 설정&#10;- SpringRestDocs 설정" />
   </component>
 </project>
