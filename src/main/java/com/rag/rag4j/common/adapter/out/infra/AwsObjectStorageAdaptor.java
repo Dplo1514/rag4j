@@ -5,7 +5,10 @@ import com.amazonaws.services.s3.model.AmazonS3Exception;
 import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectDto;
+import com.amazonaws.services.s3.model.S3Object;
+import com.amazonaws.services.s3.model.S3ObjectInputStream;
+import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectStreamDto;
+import com.rag.rag4j.common.application.dto.ObjectStorageGetObjectUrlDto;
 import com.rag.rag4j.common.application.dto.ObjectStorageUploadDto;
 import com.rag.rag4j.common.application.dto.command.ObjectStorageDeleteCommand;
 import com.rag.rag4j.common.application.dto.command.ObjectStorageUploadCommand;
@@ -66,12 +69,26 @@ public class AwsObjectStorageAdaptor implements ObjectStorageOutPutPort {
 
 
     @Override
-    public ObjectStorageGetObjectDto getObject(ObjectStorageGetQuery query) {
+    public ObjectStorageGetObjectUrlDto getObjectUrl(ObjectStorageGetQuery query) {
         String bucket = s3Config.getBucket();
         try {
             String signature = query.getSignature();
             URL url = awsS3.getUrl(bucket, signature);
-            return ObjectStorageGetObjectDto.of(url.toString(), signature);
+            return ObjectStorageGetObjectUrlDto.of(url.toString(), signature);
+        } catch (AmazonS3Exception e) {
+            log.error(e.getMessage());
+            throw new GlobalException(AwsErrorCode.FILE_READ_FAILURE);
+        }
+    }
+
+    @Override
+    public ObjectStorageGetObjectStreamDto getObjectStream(ObjectStorageGetQuery query) {
+        String bucket = s3Config.getBucket();
+        try {
+            String signature = query.getSignature();
+            S3Object object = awsS3.getObject(bucket, signature);
+            S3ObjectInputStream stream = object.getObjectContent();
+            return ObjectStorageGetObjectStreamDto.of(signature, stream);
         } catch (AmazonS3Exception e) {
             log.error(e.getMessage());
             throw new GlobalException(AwsErrorCode.FILE_READ_FAILURE);

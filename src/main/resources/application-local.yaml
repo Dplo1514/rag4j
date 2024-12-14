@@ -23,6 +23,14 @@ spring:
         format_sql: true
     open-in-view: false
     database-platform: org.hibernate.dialect.MySQL8Dialect
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: rag4j-group
+      auto-offset-reset: earliest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 ## JWT
 jwt:
@@ -32,3 +40,11 @@ jwt:
     expiration: 99999999999999999
   refresh-token:
     expiration: 99999999999999999
+
+## S3
+cloud:
+  drive:
+    credentials:
+      file-path: src/main/resources/static/google_cloud_credentials.json
+    application:
+      name: raf4jProject
