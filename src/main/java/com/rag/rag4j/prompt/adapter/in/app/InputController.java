@@ -22,7 +22,12 @@ public class InputController {
     public ResponseEntity<CommonBody<String>> processInput(@RequestBody InputRequest request) {
         System.out.println("Access Checked");
         // 입력으로부터 텍스트 확인
-        String result = UseCase.process(request.getInputText());
+        String result;
+        if(request == null){
+            result = UseCase.process("대한민국 헌법 1조 1항에 대해 알려줘");
+        }else{
+            result = UseCase.process(request.getInputText());
+        }
         return ResponseEntity.ok(CommonBody.of(200, "Success", result));
     }
 }

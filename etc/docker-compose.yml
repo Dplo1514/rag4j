@@ -30,7 +30,7 @@ services:
     image: ghcr.io/chroma-core/chroma:latest  # 최신 ChromaDB 이미지 사용
     container_name: chromadb_container
     ports:
-      - "5000:5000"  # ChromaDB의 기본 포트 5000을 외부에 노출
+      - "8000:8000"  # ChromaDB의 기본 포트 5000을 외부에 노출
     restart: always
     environment:
       - CHROMADB_SERVER_HOST=0.0.0.0  # 모든 IP에서 접근 가능하게 설정

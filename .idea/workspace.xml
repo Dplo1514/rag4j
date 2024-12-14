@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="크로마 정상 작동 확인">
+    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="코드 접근 확인">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/etc/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/WebClientConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/app/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/adapter/in/app/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/ChromaDbAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/ChromaDbAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734204084015</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="코드 접근 확인">
+      <option name="closed" value="true" />
+      <created>1734205297151</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734205297151</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +380,7 @@
     <MESSAGE value="크로마 디비 연결 테스트" />
     <MESSAGE value="크로마 붙여서 일단 숨은 쉼" />
     <MESSAGE value="크로마 정상 작동 확인" />
-    <option name="LAST_COMMIT_MESSAGE" value="크로마 정상 작동 확인" />
+    <MESSAGE value="코드 접근 확인" />
+    <option name="LAST_COMMIT_MESSAGE" value="코드 접근 확인" />
   </component>
 </project>
