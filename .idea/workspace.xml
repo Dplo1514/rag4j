@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="open AI 이용한 백터 임배딩">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/adapter/out/OpenAiEmbeddingClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/adapter/out/OpenAiEmbeddingClient.java" afterDir="false" />
+    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="main merge">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/adapter/out/LegalSourceDataAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/application/domain/service/ReindexingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/application/port/in/ReindexingUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/application/port/out/SourceDataPort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +55,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="package.json" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -112,47 +116,47 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.etc.chroma-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build rag4j.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Rag4jApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TempControllerTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.rag4j [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.rag4j [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.rag4j [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Rag4jApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;embadding&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/devlee/dev/study/rag/rag4j/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MTFeaturesSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.etc.chroma-db: Compose Deployment.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build rag4j.executor": "Run",
+    "Gradle.Rag4jApplicationTests.executor": "Run",
+    "Gradle.TempControllerTest.test.executor": "Run",
+    "Gradle.rag4j [build].executor": "Run",
+    "Gradle.rag4j [clean].executor": "Run",
+    "Gradle.rag4j [dependencies].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Spring Boot.Rag4jApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "embadding",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Desktop/RAG4j/rag4j/src/main/resources/static",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\RAG4j\rag4j\src\main\resources\static" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/java/com/rag/rag4j" />
       <recent name="$PROJECT_DIR$/src/main/java/com/rag/rag4j" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/doc" />
@@ -164,7 +168,7 @@
       <recent name="com.rag.rag4j.template.adapter.in.app" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.rag4j [dependencies]">
+  <component name="RunManager" selected="Spring Boot.Rag4jApplication">
     <configuration name="Rag4jApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -322,6 +326,7 @@
       <workItem from="1732523508437" duration="741000" />
       <workItem from="1732524256214" duration="1163000" />
       <workItem from="1734158188011" duration="5331000" />
+      <workItem from="1734210036869" duration="2554000" />
     </task>
     <task id="LOCAL-00001" summary="1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발">
       <option name="closed" value="true" />
@@ -331,7 +336,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732523557381</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="open AI 이용한 백터 임배딩">
+      <option name="closed" value="true" />
+      <created>1734210162313</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734210162313</updated>
+    </task>
+    <task id="LOCAL-00003" summary="main merge">
+      <option name="closed" value="true" />
+      <created>1734211170558</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734211170558</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +374,7 @@
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
     <MESSAGE value="chroma DB 도입" />
     <MESSAGE value="open AI 이용한 백터 임배딩" />
-    <option name="LAST_COMMIT_MESSAGE" value="open AI 이용한 백터 임배딩" />
+    <MESSAGE value="main merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="main merge" />
   </component>
 </project>

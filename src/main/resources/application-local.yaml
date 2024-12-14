@@ -48,3 +48,24 @@ cloud:
       file-path: src/main/resources/static/google_cloud_credentials.json
     application:
       name: raf4jProject
+  aws:
+    credentials:
+      accessKey: "AKIAZQ3DTZWCHMWM4CH4"
+      secretKey: "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"
+    s3:
+      bucket: e-bot-local
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+
+chroma:
+  host: http://localhost:8000
+  username: root
+  password: root
+
+openai:
+  api:
+    url: https://api.openai.com/v1/embeddings
+    key: ?? ??
+
