@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/etc/docker-compose.yml" afterDir="false" />
+    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="open AI 이용한 백터 임배딩">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/adapter/out/OpenAiEmbeddingClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/embadding/adapter/out/OpenAiEmbeddingClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,51 +98,54 @@
     &quot;accountId&quot;: &quot;d2b8499f-4535-4bff-8f82-6d5d69744a22&quot;
   }
 }</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2pCLEXQhtAm7kW5d8ZqMM2EhiWC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.etc.chroma-db: Compose Deployment.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build rag4j.executor": "Run",
-    "Gradle.Rag4jApplicationTests.executor": "Run",
-    "Gradle.TempControllerTest.test.executor": "Run",
-    "Gradle.rag4j [build].executor": "Run",
-    "Gradle.rag4j [clean].executor": "Run",
-    "Gradle.rag4j [dependencies].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "Spring Boot.Rag4jApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "embadding",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/devlee/dev/study/rag/rag4j/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.etc.chroma-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build rag4j.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Rag4jApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TempControllerTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.rag4j [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.rag4j [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.rag4j [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Rag4jApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;embadding&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/devlee/dev/study/rag/rag4j/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MTFeaturesSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -162,7 +164,7 @@
       <recent name="com.rag.rag4j.template.adapter.in.app" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.etc.chroma-db: Compose Deployment">
+  <component name="RunManager" selected="Gradle.rag4j [dependencies]">
     <configuration name="Rag4jApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -262,7 +264,9 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="etc.chroma-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -288,19 +292,19 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.etc.chroma-db: Compose Deployment" />
         <item itemvalue="Gradle.rag4j [dependencies]" />
-        <item itemvalue="Gradle.Rag4jApplicationTests" />
         <item itemvalue="Gradle.rag4j [build]" />
         <item itemvalue="Gradle.rag4j [clean]" />
+        <item itemvalue="Docker.etc.chroma-db: Compose Deployment" />
+        <item itemvalue="Gradle.Rag4jApplicationTests" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -347,6 +351,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
-    <option name="LAST_COMMIT_MESSAGE" value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
+    <MESSAGE value="chroma DB 도입" />
+    <MESSAGE value="open AI 이용한 백터 임배딩" />
+    <option name="LAST_COMMIT_MESSAGE" value="open AI 이용한 백터 임배딩" />
   </component>
 </project>
