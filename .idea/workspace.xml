@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="크로마 디비 연결 테스트">
+    <list default="true" id="5c18c561-0430-4793-9f17-894c7fe742e3" name="Changes" comment="크로마 붙여서 일단 숨은 쉼">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/etc/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/PromptGenerateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rag/rag4j/prompt/application/domain/service/PromptGenerateService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734201644079</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="크로마 붙여서 일단 숨은 쉼">
+      <option name="closed" value="true" />
+      <created>1734202988215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734202988215</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +360,7 @@
     <MESSAGE value="build/templates&#10;&#10;1. project 구조 설계&#10;2. Template 설계&#10;&#10;[TO-DO]&#10;Application 정상 빌드 확인을 위한 Template API 개발" />
     <MESSAGE value="기본 코드" />
     <MESSAGE value="크로마 디비 연결 테스트" />
-    <option name="LAST_COMMIT_MESSAGE" value="크로마 디비 연결 테스트" />
+    <MESSAGE value="크로마 붙여서 일단 숨은 쉼" />
+    <option name="LAST_COMMIT_MESSAGE" value="크로마 붙여서 일단 숨은 쉼" />
   </component>
 </project>
